@@ -34,7 +34,7 @@ lista-de-exercicios/
 ## ✅ Pré-requisitos
 Node.js instalado na sua máquina
 
-# 🚀 Como Executar os Exercícios
+## 🚀 Como Executar os Exercícios
 Clone ou baixe este repositório:
 
 ```bash
@@ -42,7 +42,7 @@ git clone https://github.com/seu-usuario/lista-de-exercicios.git
 cd Lista de Exercícios 1 - Estudando as estruturas básicas/
 
 ```
-# Execute o exercício desejado com Node.js:
+## Execute o exercício desejado com Node.js:
 
 ```bash
 node exercicio01.js
@@ -52,16 +52,16 @@ node exercicio01.js
 📦 Entrada de Dados com prompt-sync
 Alguns exercícios utilizam entrada de dados no terminal. Para isso, é necessário instalar o pacote prompt-sync:
 
-# Instalação:
+## Instalação:
 
 ```bash
 npm install prompt-sync
 ```
-# Como utilizar no início do seu arquivo .js:
+## Como utilizar no início do seu arquivo .js:
 ```js
 const prompt = require('prompt-sync')();
 ```
-# 📘 Lista de Exercícios
+## 📘 Lista de Exercícios
 ```Arquivo	Descrição
 exercicio01.js	Verifica se um número é par ou ímpar
 
