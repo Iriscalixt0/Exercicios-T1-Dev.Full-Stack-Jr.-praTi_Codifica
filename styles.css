@@ -1,0 +1,182 @@
+/* ===================================================
+   Exercício 4 – CSS Básico e Box Model
+   =================================================== */
+
+/* Estilo geral */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #000000;
+    line-height: 1.6;
+}
+
+/* Header, Main e Footer com cores, margens, padding e bordas */
+header, main, footer {
+    margin: 30px auto;
+    padding: 30px;
+    border: 2px solid #dcdcdc;
+    border-radius: 8px;
+    max-width: 1000px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+header {
+    background-color: #acbfff;;
+    color: #00255c;
+}
+
+main {
+    background-color: #acbfff;
+    color: #00255c;
+}
+
+footer {
+    background-color: #acbfff;
+    color: #00255c;
+    text-align: center;
+}
+
+/* ===================================================
+   Exercício 5 – Seletores e Propriedades
+   =================================================== */
+
+/* Estilo para todas as tags h2 */
+h2 {
+    font-size: 1.8em;
+    text-decoration: underline;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+/* Classe .destaque */
+.destaque {
+    font-style: italic;
+    background-color: #f0f4c3;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+/* ID #importante */
+#importante {
+    border-top: 5px solid #000000;
+    padding-top: 10px;
+}
+
+/* ===================================================
+   Exercício 6 – Grid e Flexbox
+   =================================================== */
+
+/* Contêiner da galeria centralizado com Flexbox */
+.galeria-container {
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+/* Galeria com Grid */
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.galeria div {
+    text-align: center;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.galeria img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+    margin-bottom: 5px;
+    transition: transform 0.3s;
+}
+
+.galeria img:hover {
+    transform: scale(1.02);
+}
+
+/* Responsividade para Grid */
+@media (max-width: 800px) {
+    .galeria {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    .galeria {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ===================================================
+   Exercício 7 – Menu Hamburger Responsivo
+   =================================================== */
+
+/* Navegação principal */
+.menu-principal {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #0d47a1;
+    color: white;
+    padding: 10px 20px;
+}
+
+.menu-principal ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-principal a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.menu-principal a:hover {
+    color: #bbdefb;
+}
+
+/* Botão hamburger (oculto por padrão) */
+#hamburger {
+    display: none;
+    font-size: 28px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* Estilo responsivo para menu hamburger */
+@media (max-width: 600px) {
+    .menu-principal ul {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        background-color: #0d47a1;
+        padding: 10px 0;
+    }
+
+    #hamburger {
+        display: block;
+    }
+
+    .menu-principal ul.mostrar {
+        display: flex;
+    }
+}
